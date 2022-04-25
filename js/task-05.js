@@ -5,7 +5,10 @@ nameInputRef.addEventListener('input',inputChange)
 function inputChange(event){
  nameOutputRef.textContent = event.currentTarget.value
 }
-function refreshInput() {
-    nameOutputRef.textContent = 'Anonymous'
+function refreshInput(event) {
+    
+    if (event.currentTarget.value === '') {
+        nameOutputRef.textContent = 'Anonymous'
+    }
 }
-nameInputRef.addEventListener('blur',refreshInput)
+ console.log(nameInputRef.addEventListener('blur', refreshInput))
