@@ -4,3 +4,4 @@ function inputs(event) {
     spanRef.style.fontSize = event.currentTarget.value + 'px'
 }
 inputRef.addEventListener('input', inputs)
+spanRef.style.fontSize = inputRef.value + 'px'

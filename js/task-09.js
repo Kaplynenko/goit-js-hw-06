@@ -4,8 +4,9 @@ const velueColor = document.querySelector('.color')
 
 changeColorBtn.addEventListener('click', changeColor)
 function changeColor() {
-  bodyRef.style.backgroundColor = getRandomHexColor();
-velueColor.textContent = getRandomHexColor()
+  const color = getRandomHexColor();
+  bodyRef.style.backgroundColor = color;
+  velueColor.textContent = color;
 }
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
